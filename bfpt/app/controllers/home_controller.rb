@@ -20,6 +20,14 @@ class HomeController < ApplicationController
     @zone = 'fruleview'
   end
   
+  def mrmodel
+    @zone = 'mrmodel'
+  end
+  
+  def result
+    @zone = 'result'
+  end
+  
   def login
   end
 

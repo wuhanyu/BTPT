@@ -15,7 +15,7 @@
 				</ul>
 			</li>
 			<li class="sub-menu">
-				<a href="javascript:;"  class="<%=['mbfunction', 'frulecal', 'fruleview'].include?(@zone) ?'active' : '' %>"> <i class="icon-tasks"></i> <span>模糊关联规则挖掘</span> </a>
+				<a href="javascript:;"  class="<%= ['mbfunction', 'frulecal', 'fruleview'].include?(@zone) ?'active' : '' %>"> <i class="icon-tasks"></i> <span>模糊关联规则挖掘</span> </a>
 				<ul class="sub">
 					<li class="<%= @zone =='mbfunction' ? 'active' : '' %>">
 						<a  href="mbfunction">隶属度函数定义</a>
@@ -29,14 +29,17 @@
 				</ul>
 			</li>
 			<li class="sub-menu">
-				<a href="javascript:;" > <i class=" icon-bar-chart"></i> <span>多元回归预测模块</span> </a>
+				<a href="javascript:;" class="<%= ['mrmodel', 'result'].include?(@zone) ?'active' : '' %>" > <i class=" icon-bar-chart"></i> <span>多元回归预测模块</span> </a>
 				<ul class="sub">
-					<li>
-						<a  href="morris.html">多元回归模型</a>
+					<li class="<%= @zone =='mrmodel' ? 'active' : '' %>">
+						<a  href="mrmodel">多元回归模型</a>
+					</li>
+					<li class="<%= @zone =='result' ? 'active' : '' %>">
+						<a  href="result">缺陷报告修复时间预测</a>
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="sub-menu">
 				<a  href="login.html"> <i class="icon-user"></i> <span>登出</span> </a>
 			</li>
 

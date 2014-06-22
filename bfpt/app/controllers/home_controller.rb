@@ -8,6 +8,18 @@ class HomeController < ApplicationController
     @zone = 'fileupload'
   end
   
+  def mbfunction
+    @zone = 'mbfunction'
+  end
+  
+  def frulecal
+    @zone = 'frulecal'
+  end
+  
+  def fruleview
+    @zone = 'fruleview'
+  end
+  
   def login
   end
 

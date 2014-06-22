@@ -8,6 +8,9 @@ Bfpt::Application.routes.draw do
   get 'login' => "home#login"
   get 'index' => "home#index"
   get 'fileupload' => "home#fileupload"
+  get 'mbfunction' => "home#mbfunction"
+  get 'frulecal' => "home#frulecal"
+  get 'fruleview' => "home#fruleview"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

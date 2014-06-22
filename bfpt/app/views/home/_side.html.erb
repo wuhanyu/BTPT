@@ -7,10 +7,13 @@
 				<a class="<%= @zone =='index' ? 'active' : '' %>" href="index.html"> <i class="icon-dashboard"></i> <span>首页</span> </a>
 			</li>
 			<li class="sub-menu">
-				<a href="javascript:;" class="<%= @zone =='fileupload' ? 'active' : '' %>" > <i class="icon-th"></i> <span>缺陷报告属性抽取</span> </a>
+				<a href="javascript:;"  class="<%= ['fileupload', 'bugreportview'].include?(@zone) ?'active' : '' %>"> <i class="icon-th"></i> <span>缺陷报告属性抽取</span> </a>
 				<ul class="sub">
 					<li class="<%= @zone =='fileupload' ? 'active' : '' %>">
 						<a  href="fileupload">数据上传</a>
+					</li>
+					<li class="<%= @zone =='bugreportview' ? 'active' : '' %>">
+						<a  href="bugreportview">缺陷报告查看</a>
 					</li>
 				</ul>
 			</li>

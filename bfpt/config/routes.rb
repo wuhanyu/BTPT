@@ -8,6 +8,7 @@ Bfpt::Application.routes.draw do
   get 'login' => "home#login"
   get 'index' => "home#index"
   get 'fileupload' => "home#fileupload"
+  get 'bugreportview' => "home#bugreportview"
   get 'mbfunction' => "home#mbfunction"
   get 'frulecal' => "home#frulecal"
   get 'fruleview' => "home#fruleview"

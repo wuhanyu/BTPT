@@ -28,6 +28,10 @@ class HomeController < ApplicationController
     @zone = 'result'
   end
   
+  def bugreportview
+    @zone = "bugreportview"
+  end
+  
   def login
   end
 

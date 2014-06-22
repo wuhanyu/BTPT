@@ -18,6 +18,7 @@ class HomeController < ApplicationController
   
   def fruleview
     @zone = 'fruleview'
+    @frs = Frule.all
   end
   
   def mrmodel

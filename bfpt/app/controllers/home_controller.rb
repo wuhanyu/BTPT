@@ -26,10 +26,12 @@ class HomeController < ApplicationController
   
   def result
     @zone = 'result'
+    @brs = Bugreport.paginate(:page => params[:page], :per_page => 20)
   end
   
   def bugreportview
     @zone = "bugreportview"
+    @brs = Bugreport.paginate(:page => params[:page], :per_page => 20)
   end
   
   def login

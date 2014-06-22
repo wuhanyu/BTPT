@@ -1,4 +1,8 @@
-<style>li.task-item {height:30px}</style>
+<style>
+	li.task-item {
+		height: 30px
+	}
+</style>
 
 <section id="main-content">
 	<section class="wrapper">
@@ -14,142 +18,36 @@
 						<div class="task-content">
 
 							<ul class="task-list">
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">NSPR is calling ccache recursively</span>
-										<span class="badge badge-sm label-success">2天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
+								<% @brs.each do |br| %>
+								<tr>
+									<li class="task-item">
+										<div class="task-title">
+											<span class="task-title-sp"><%= br.seq%>:<%= br.resolution%></span>
+											<span class="badge badge-sm <% if br.elapsedday > 100%>
+											label-danger
+											<% elsif br.elapsedday > 30%>
+											label-warning
+											<% elsif br.elapsedday > 5%>
+											label-primary
+											<% else%>
+											label-success
+											<% end %>"><%= br.elapsedday%>天</span>
+											<div class="pull-right hidden-phone">
+												<button class="btn btn-success btn-xs">
+													<i class="icon-ok"></i>
+												</button>
+												<button class="btn btn-primary btn-xs">
+													<i class="icon-pencil"></i>
+												</button>
+												<button class="btn btn-danger btn-xs">
+													<i class="icon-trash "></i>
+												</button>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Configure should require DirectX SDK when building WebRTC</span>
-										<span class="badge badge-sm label-danger">35天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Linker errors building on Windows with VS2010 and --disable-webrtc</span>
-										<span class="badge badge-sm label-warning">12天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Add 'hsb' to the Firefox build</span>
-										<span class="badge badge-sm label-primary">5天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Beta debug builds are branded as Holly</span>
-										<span class="badge badge-sm label-info">130天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">create mozconfigs for no-profiling builds</span>
-										<span class="badge badge-sm label-inverse">68天</span>
-										<div class="pull-right">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Mach bootstrap error on Osx 10.9</span>
-										<span class="badge badge-sm label-success">2天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
-								<li class="task-item">
-									<div class="task-title">
-										<span class="task-title-sp">Fails to build under Debian powerpcspe</span>
-										<span class="badge badge-sm label-danger">42天</span>
-										<div class="pull-right hidden-phone">
-											<button class="btn btn-success btn-xs">
-												<i class="icon-ok"></i>
-											</button>
-											<button class="btn btn-primary btn-xs">
-												<i class="icon-pencil"></i>
-											</button>
-											<button class="btn btn-danger btn-xs">
-												<i class="icon-trash "></i>
-											</button>
-										</div>
-									</div>
-								</li>
+									</li>
+
+								</tr>
+								<% end %>
 
 							</ul>
 						</div>
@@ -158,6 +56,7 @@
 							<a class="btn btn-success btn-sm pull-left" href="#">添加新缺陷报告</a>
 						</div>
 					</div>
+					<%= will_paginate @brs%>
 				</section>
 			</div>
 		</div>

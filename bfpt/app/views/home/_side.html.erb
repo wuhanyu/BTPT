@@ -1,0 +1,47 @@
+<!--sidebar start-->
+<aside>
+	<div id="sidebar"  class="nav-collapse ">
+		<!-- sidebar menu start-->
+		<ul class="sidebar-menu" id="nav-accordion">
+			<li>
+				<a class="<%= @zone =='index' ? 'active' : '' %>" href="index.html"> <i class="icon-dashboard"></i> <span>首页</span> </a>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" > <i class="icon-th"></i> <span>缺陷报告属性抽取</span> </a>
+				<ul class="sub">
+					<li class="<%= @zone =='fileupload' ? 'active' : '' %>">
+						<a  href="fileupload">数据上传</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" > <i class="icon-tasks"></i> <span>模糊关联规则挖掘</span> </a>
+				<ul class="sub">
+					<li>
+						<a  href="form_component.html">隶属度函数定义</a>
+					</li>
+					<li>
+						<a  href="advanced_form_components.html">模糊关联规则挖掘计算</a>
+					</li>
+					<li>
+						<a  href="form_wizard.html">模糊关联规则查看</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" > <i class=" icon-bar-chart"></i> <span>多元回归预测模块</span> </a>
+				<ul class="sub">
+					<li>
+						<a  href="morris.html">多元回归模型</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a  href="login.html"> <i class="icon-user"></i> <span>登出</span> </a>
+			</li>
+
+		</ul>
+		<!-- sidebar menu end-->
+	</div>
+</aside>
+<!--sidebar end-->

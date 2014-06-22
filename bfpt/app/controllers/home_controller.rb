@@ -1,9 +1,16 @@
 class HomeController < ApplicationController
-  
+  layout "homelayout", except: [:login]
   def index
-    render "/index"
+    @zone = 'index'
   end
   
+  def fileupload
+    @zone = 'fileupload'
+  end
+  
+  def login
+  end
+
   def apply
     
   end

@@ -13,7 +13,8 @@ Bfpt::Application.routes.draw do
   get 'frulecal' => "home#frulecal"
   get 'fruleview' => "home#fruleview"
   get 'mrmodel' => "home#mrmodel"
-  get "result" => "home#result"
+  get 'result' => "home#result"
+  get 'bugreport' => "home#bugreport"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
